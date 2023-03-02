@@ -52,10 +52,13 @@ public class VisualizarDatosController extends HttpServlet {
 		String email = usuario.getEmail();
 		Integer telefono = usuario.getTelefono();
 		String tlf = telefono.toString();
+		String provincia = usuario.getProvincia();
 		request.setAttribute("nombre", nombre);
 		request.setAttribute("apellidos", apellidos);
 		request.setAttribute("email", email);
 		request.setAttribute("telefono", tlf);
+		request.setAttribute("provincia", provincia);
+		request.setAttribute("provincias", ProvinciasController.cargarProvincias());
 		request.getRequestDispatcher("./jsp/perfil_editable.jsp").forward(request, response);
 	}
 

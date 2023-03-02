@@ -66,7 +66,7 @@
 								<input type="submit" name="boton" value="Acceder">
 							</div>
 						</form>
-						<form action="<%=request.getContextPath()%>/jsp/registro.jsp"
+						<form action="<%=request.getContextPath()%>/preregistro"
 							method="post" class="form form-login">
 
 							<div class="form-field">

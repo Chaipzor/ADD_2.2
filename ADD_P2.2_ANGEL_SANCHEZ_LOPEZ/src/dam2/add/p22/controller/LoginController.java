@@ -72,7 +72,7 @@ public class LoginController extends HttpServlet {
 			request.getSession().setAttribute("admin", admin);
 			MiResourceBundle.idiomaActivo(UsuarioService.obtenerTodos().get(posicion).getIdioma());
 		}
-
+		request.setAttribute("listaContactos", UsuarioService.obtenerTodosSinAdmin());
 		request.setAttribute("repetir", repetir);
 		request.setAttribute("texto", texto);
 		request.getRequestDispatcher(referencia).forward(request, response);

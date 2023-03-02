@@ -76,7 +76,8 @@ public class RegistroController extends HttpServlet {
 				UsuarioService.crearUsuario(new Usuario(nombre, apellidos, email, telefono, pass, false, idioma, provincia));
 			}
 		}
-		request.getSession().setAttribute("listaContactos", UsuarioService.obtenerTodosSinAdmin());
+		request.setAttribute("provincias", ProvinciasController.cargarProvincias());
+		request.setAttribute("listaContactos", UsuarioService.obtenerTodosSinAdmin());
 		request.setAttribute("repetir", repetir);
 		request.setAttribute("texto", texto);
 		request.getRequestDispatcher(referencia).forward(request, response);

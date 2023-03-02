@@ -36,8 +36,8 @@ public class IdiomaController extends HttpServlet {
 			int id = (Integer) request.getSession().getAttribute("id");
 			UsuarioService.actualizarIdioma(id,idioma);
 		}
+		request.setAttribute("listaContactos", UsuarioService.obtenerTodosSinAdmin());
 		request.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
-		
 	}
 
 	/**

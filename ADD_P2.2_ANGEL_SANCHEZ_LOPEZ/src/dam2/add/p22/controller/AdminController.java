@@ -64,6 +64,7 @@ public class AdminController extends HttpServlet {
 				request.setAttribute("email", usuario.getEmail());
 				String telefono = String.valueOf(usuario.getTelefono());
 				request.setAttribute("telefono", telefono);
+				request.setAttribute("provincia", usuario.getProvincia());
 				request.getSession().setAttribute("editid", id);
 				request.getSession().setAttribute("emailsesion",
 						usuario.getEmail());

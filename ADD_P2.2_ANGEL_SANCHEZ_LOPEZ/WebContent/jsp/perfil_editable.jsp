@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.Arrays"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,7 +125,7 @@
  %>
 									</label> <select name="provincia">
 										<c:forEach var="item" items="${provincias}">
-											<option value="${item.nm}">${item.nm}</option>
+											<option value="${item.nm}" ${item.nm == provincia ? 'selected="selected"' : ''} >${item.nm}</option>
 										</c:forEach>
 									</select>
 								</div>

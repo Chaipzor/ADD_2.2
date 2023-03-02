@@ -61,12 +61,14 @@ public class PerfilController extends HttpServlet {
 		String email = usuario.getEmail();
 		Integer telefono = usuario.getTelefono();
 		String tlf = telefono.toString();
+		String provincia = usuario.getProvincia();
 
 		// Mostramos los datos del usuario con el que estamos logeados en el sistema.
 		request.setAttribute("nombre", nombre);
 		request.setAttribute("apellidos", apellidos);
 		request.setAttribute("email", email);
 		request.setAttribute("telefono", tlf);
+		request.setAttribute("provincia", provincia);
 		request.getRequestDispatcher("./jsp/perfil.jsp").forward(request, response);
 	}
 
